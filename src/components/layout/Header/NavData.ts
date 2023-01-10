@@ -43,7 +43,7 @@ export const AdminNAvData = [
   {
     id: 2,
     name: "Product History",
-    link: "#",
+    link: "/product-history",
   },
   {
     id: 3,

@@ -201,148 +201,152 @@ export default function Cart() {
               {ItemToCart.length !== 0 && !orderPlaced ? (
                 <Box>
                   <table>
-                    <tr>
-                      <th></th>
-                      <th>
-                        <Typography
-                          variant="body1"
-                          sx={{ fontFamily: "poppins", fontWeight: 500 }}
-                        >
-                          Product Name
-                        </Typography>
-                      </th>
-                      <th>
-                        <Typography
-                          variant="body1"
-                          sx={{ fontFamily: "poppins", fontWeight: 500 }}
-                        >
-                          Price
-                        </Typography>
-                      </th>
-                      <th>
-                        <Typography
-                          variant="body1"
-                          sx={{ fontFamily: "poppins", fontWeight: 500 }}
-                        >
-                          Quantity
-                        </Typography>
-                      </th>
-                      <th>
-                        <Typography
-                          variant="body1"
-                          sx={{ fontFamily: "poppins", fontWeight: 500 }}
-                        >
-                          Size
-                        </Typography>
-                      </th>
-                      <th>
-                        <Typography
-                          variant="body1"
-                          sx={{ fontFamily: "poppins", fontWeight: 500 }}
-                        >
-                          Total Price
-                        </Typography>
-                      </th>
-                      <th>
-                        <Typography
-                          variant="body1"
-                          sx={{ fontFamily: "poppins", fontWeight: 500 }}
-                        >
-                          Delete Item
-                        </Typography>
-                      </th>
-                    </tr>
-                    {ItemToCart.map((item: any) => (
-                      <tr key={item.productId}>
-                        <td>
-                          <Box
-                            sx={{
-                              display: "flex",
-                              textAlign: "center",
-                              width: "50px",
-                              height: "50px",
-                              justifyContent: "center",
-                              overflow: "hidden",
-                              alignItems: "center",
-                            }}
-                          >
-                            <img
-                              src={item.img}
-                              alt=""
-                              style={{ maxWidth: "100%", maxHeight: "100%" }}
-                            />
-                          </Box>
-                        </td>
-                        <td>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>
                           <Typography
                             variant="body1"
-                            sx={{ fontFamily: "poppins" }}
+                            sx={{ fontFamily: "poppins", fontWeight: 500 }}
                           >
-                            {item.name}
+                            Product Name
                           </Typography>
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                           <Typography
                             variant="body1"
-                            sx={{ fontFamily: "poppins" }}
+                            sx={{ fontFamily: "poppins", fontWeight: 500 }}
                           >
-                            ${item.price}.00
+                            Price
                           </Typography>
-                        </td>
-                        <td>
-                          <Box
-                            sx={{
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                            }}
+                        </th>
+                        <th>
+                          <Typography
+                            variant="body1"
+                            sx={{ fontFamily: "poppins", fontWeight: 500 }}
                           >
-                            <Button
-                              sx={{
-                                fontSize: 25,
-                                fontFamily: "poppins",
-                                color: "#154128",
-                              }}
-                              onClick={() => decreaseQuantityHandler(item)}
-                            >
-                              -
-                            </Button>
-
-                            <Typography sx={{ fontFamily: "poppins" }}>
-                              {item.quantity}
-                            </Typography>
-                            <Button
-                              sx={{
-                                fontSize: 25,
-                                fontFamily: "poppins",
-                                color: "#154128",
-                              }}
-                              onClick={() => increaseQuantityHandler(item)}
-                            >
-                              +
-                            </Button>
-                          </Box>
-                        </td>
-                        <td>
-                          <Typography sx={{ pl: 1, fontWeight: 600 }}>
-                            34
+                            Quantity
                           </Typography>
-                        </td>
-                        <td>
-                          <Typography sx={{ pl: 1, fontWeight: 600 }}>
-                            ${item.totalPrice}.00
-                          </Typography>
-                        </td>
-                        <td>
-                          <Button
-                            sx={{ color: "#154128" }}
-                            onClick={() => deleteHandler(item)}
+                        </th>
+                        <th>
+                          <Typography
+                            variant="body1"
+                            sx={{ fontFamily: "poppins", fontWeight: 500 }}
                           >
-                            <DeleteIcon />
-                          </Button>
-                        </td>
+                            Size
+                          </Typography>
+                        </th>
+                        <th>
+                          <Typography
+                            variant="body1"
+                            sx={{ fontFamily: "poppins", fontWeight: 500 }}
+                          >
+                            Total Price
+                          </Typography>
+                        </th>
+                        <th>
+                          <Typography
+                            variant="body1"
+                            sx={{ fontFamily: "poppins", fontWeight: 500 }}
+                          >
+                            Delete Item
+                          </Typography>
+                        </th>
                       </tr>
-                    ))}
+                    </thead>
+                    <tbody>
+                      {ItemToCart.map((item: any) => (
+                        <tr key={item.productId}>
+                          <td>
+                            <Box
+                              sx={{
+                                display: "flex",
+                                textAlign: "center",
+                                width: "50px",
+                                height: "50px",
+                                justifyContent: "center",
+                                overflow: "hidden",
+                                alignItems: "center",
+                              }}
+                            >
+                              <img
+                                src={item.img}
+                                alt=""
+                                style={{ maxWidth: "100%", maxHeight: "100%" }}
+                              />
+                            </Box>
+                          </td>
+                          <td>
+                            <Typography
+                              variant="body1"
+                              sx={{ fontFamily: "poppins" }}
+                            >
+                              {item.name}
+                            </Typography>
+                          </td>
+                          <td>
+                            <Typography
+                              variant="body1"
+                              sx={{ fontFamily: "poppins" }}
+                            >
+                              ${item.price}.00
+                            </Typography>
+                          </td>
+                          <td>
+                            <Box
+                              sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                              }}
+                            >
+                              <Button
+                                sx={{
+                                  fontSize: 25,
+                                  fontFamily: "poppins",
+                                  color: "#154128",
+                                }}
+                                onClick={() => decreaseQuantityHandler(item)}
+                              >
+                                -
+                              </Button>
+
+                              <Typography sx={{ fontFamily: "poppins" }}>
+                                {item.quantity}
+                              </Typography>
+                              <Button
+                                sx={{
+                                  fontSize: 25,
+                                  fontFamily: "poppins",
+                                  color: "#154128",
+                                }}
+                                onClick={() => increaseQuantityHandler(item)}
+                              >
+                                +
+                              </Button>
+                            </Box>
+                          </td>
+                          <td>
+                            <Typography sx={{ pl: 1, fontWeight: 600 }}>
+                              {item.size ? item.size : "no size available"}
+                            </Typography>
+                          </td>
+                          <td>
+                            <Typography sx={{ pl: 1, fontWeight: 600 }}>
+                              ${item.totalPrice}.00
+                            </Typography>
+                          </td>
+                          <td>
+                            <Button
+                              sx={{ color: "#154128" }}
+                              onClick={() => deleteHandler(item)}
+                            >
+                              <DeleteIcon />
+                            </Button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
                   </table>
                   <Box
                     sx={{

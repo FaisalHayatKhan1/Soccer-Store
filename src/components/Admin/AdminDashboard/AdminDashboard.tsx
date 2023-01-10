@@ -9,23 +9,9 @@ const AdminDashboard = () => {
       sx={{ paddingTop: 20 }}
     >
       <Box sx={{ p: 10 }}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <Typography
-            variant="h4"
-            sx={{ fontFamily: "poppins", color: "#fff" }}
-          >
-            Register New Product
-          </Typography>
-          <Box sx={{ py: 4 }}>
-            <input placeholder="Search" type="search" />
-          </Box>
-        </Box>
+        <Typography variant="h4" sx={{ fontFamily: "poppins", color: "#fff", py:2 }}>
+          Register New Product
+        </Typography>
         <RegisterProduct />
       </Box>
     </Box>

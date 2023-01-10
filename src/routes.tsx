@@ -31,6 +31,13 @@ const AdminRoutes = [
       () => import("./components/Admin/OrderHistory/OrderHistory")
     ),
   },
+  {
+    guard: "guest",
+    path: "/product-history",
+    component: lazy(
+      () => import("./components/Admin/ProductHistory/ProductHistory")
+    ),
+  },
 ];
 
 const routesData = [

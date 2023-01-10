@@ -23,14 +23,15 @@ const ProductList = (props: any) => {
   const selectedCategory = props.catergory;
   const { productListData: productListData } = ProductListHook();
 
-  const updatedProductList =
-    selectedCategory !== "all"
-      ? ProductListMockData.filter((item) => item.category === selectedCategory)
-      : ProductListMockData;
   const mergedArray =
     productListData.length > 0
-      ? updatedProductList.concat(productListData)
-      : updatedProductList;
+      ? ProductListMockData.concat(productListData)
+      : ProductListMockData;
+
+  const updatedProductList =
+    selectedCategory !== "all"
+      ? mergedArray.filter((item) => item.category === selectedCategory)
+      : mergedArray;
 
   const dispatch = useAppDispatch();
   const [open, setOpen] = React.useState(false);
@@ -65,8 +66,8 @@ const ProductList = (props: any) => {
     <Box>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={3}>
-          {mergedArray &&
-            mergedArray.map((item: any, index) => (
+          {updatedProductList &&
+            updatedProductList.map((item: any, index) => (
               <Grid item xs={3} key={index}>
                 <Card
                   sx={{
