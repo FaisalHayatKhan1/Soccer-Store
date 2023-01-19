@@ -92,12 +92,17 @@ const DashboardHeader = () => {
               </Box>
               <Box>
                 <Typography sx={{ color: "#fff", fontFamily: "poppins" }}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
-                  iste suscipit assumenda quas culpa nostrum dolorem ipsum earum
-                  ab, error saepe! Laborum error ducimus doloribus suscipit
-                  optio eius, ea quidem iste dolorum quod nemo harum unde
-                  similique debitis sapiente ex non voluptatem minus veritatis
-                  quas consequatur ratione odio! Expedita, optio.
+                  Welcome to MY soccer website eCommerce! We are dedicated to
+                  providing soccer enthusiasts with the best selection of gear
+                  and equipment to enhance their game. Our website offers a wide
+                  variety of products, including soccer balls, cleats, jerseys,
+                  and training equipment. We also carry a range of fan
+                  merchandise for your favorite teams and clubs. Our website is
+                  designed for easy navigation and browsing, making it easy for
+                  you to find exactly what you're looking for. We offer
+                  competitive pricing on all of our products and provide fast,
+                  secure shipping options. Our customer service team is always
+                  available to assist you with any questions or concerns.
                 </Typography>
               </Box>
               {!isloggedIn && (

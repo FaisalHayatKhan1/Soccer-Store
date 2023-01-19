@@ -220,7 +220,7 @@ const OrderHistory = () => {
                                       color: "#154128",
                                     }}
                                   >
-                                    Total price ($)
+                                    Total price (£)
                                   </TableCell>
                                   <TableCell
                                     align="center"

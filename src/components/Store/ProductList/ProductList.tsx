@@ -108,7 +108,7 @@ const ProductList = (props: any) => {
                       <Typography
                         sx={{ fontFamily: "poppins", fontWeight: 600 }}
                       >
-                        ${item.price}
+                        {item.price}
                       </Typography>
                     </Box>
                     <Box>

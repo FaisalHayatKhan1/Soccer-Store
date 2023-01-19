@@ -130,7 +130,7 @@ const History = () => {
                           variant="body1"
                           sx={{ fontFamily: "poppins" }}
                         >
-                          ${item.price}.00
+                          £{item.price}.00
                         </Typography>
                       </td>
                       <td>
@@ -151,7 +151,7 @@ const History = () => {
                           variant="body1"
                           sx={{ pl: 1, fontFamily: "poppins" }}
                         >
-                          ${item.totalPrice}.00
+                          £{item.totalPrice}.00
                         </Typography>
                       </td>
                       <td>

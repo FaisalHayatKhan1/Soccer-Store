@@ -160,7 +160,11 @@ export default function SelectedModal(props: any) {
                       fontFamily: "poppins",
                       color: "#154128",
                     }}
-                    onClick={() => setQuantity(quantity + 1)}
+                    onClick={() =>
+                      quantity < 10
+                        ? setQuantity(quantity + 1)
+                        : setQuantity(quantity)
+                    }
                   >
                     +
                   </Button>

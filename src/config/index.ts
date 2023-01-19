@@ -5,5 +5,4 @@ import axios from "axios";
 // })
 
 export const BASE_URL: string =
-  "https://soccer-store-5b1b3-default-rtdb.firebaseio.com";
-
+  "https://soccer-store-46113-default-rtdb.firebaseio.com";

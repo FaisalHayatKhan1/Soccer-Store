@@ -289,7 +289,7 @@ export default function Cart() {
                               variant="body1"
                               sx={{ fontFamily: "poppins" }}
                             >
-                              ${item.price}.00
+                              £{item.price}.00
                             </Typography>
                           </td>
                           <td>
@@ -333,7 +333,7 @@ export default function Cart() {
                           </td>
                           <td>
                             <Typography sx={{ pl: 1, fontWeight: 600 }}>
-                              ${item.totalPrice}.00
+                            £{item.totalPrice}.00
                             </Typography>
                           </td>
                           <td>
